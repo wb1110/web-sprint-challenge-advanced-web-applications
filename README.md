@@ -71,16 +71,16 @@ In this project, you will demonstrate your mastery of these skills by creating *
 
 ### Route Authentication
 * [X] Build a `PrivateRoute` component within the components folder.
-* [ ] Use the `PrivateRoute` component to build a route rendering `View.js` to the path `/view`.
-* [ ] Use the `PrivateRoute` component to build a route rendering `Logout.js` to the path `/logout`.
+* [X] Use the `PrivateRoute` component to build a route rendering `View.js` to the path `/view`.
+* [X] Use the `PrivateRoute` component to build a route rendering `Logout.js` to the path `/logout`.
 
 ### Request Authentication
 > *Complete the requests needed to execute all CRUD functions.*
-* [ ] Build a `axiosWithAuth` module within the utils folder to create an instance of axios with the authentication header.
+* [X] Build a `axiosWithAuth` module within the utils folder to create an instance of axios with the authentication header.
 
-* [ ] In `View.js`, complete `handleDelete` so that a http request is made that deletes the article with the included id. After successfully deleting the article on the api, update local state to reflect these changes.
+* [X] In `View.js`, complete `handleDelete` so that a http request is made that deletes the article with the included id. After successfully deleting the article on the api, update local state to reflect these changes.
 
-* [ ] In `View.js`, complete `handleDelete` so that a http request is made that deletes the article with the included id. After successfully deleting the article on the api, update local state to reflect these changes.
+* [X] In `View.js`, complete `handleDelete` so that a http request is made that deletes the article with the included id. After successfully deleting the article on the api, update local state to reflect these changes.
 
 * [ ] `editId` is passed into the `EditForm` component. In `EditForm.js`, make a http request on mount to get the article with the id `editId`. Save the result in state.
 

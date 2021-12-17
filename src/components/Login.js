@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import styled from 'styled-components';
+import axios from 'axios';
 
 
 const Login = () => {
@@ -14,7 +15,22 @@ const Login = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        push("/view")
+        axios.post(`http://localhost:5000/api/login`, { username: value.username, password: value.password })
+        // username: Lambda password: School
+            .then(res => {
+                console.log(res)
+                push("/view")
+            })
+            .catch(err => {
+                console.log(error)
+                setValues({
+                    ...value,
+                    username: "",
+                    password: "",
+                    error: "Login Failed"
+                })
+            })
+        
     }
 
     const handleChange = (e) => {

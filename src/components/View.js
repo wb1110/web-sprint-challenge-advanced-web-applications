@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-
 import Article from './Article';
 import EditForm from './EditForm';
 import axiosWithAuth from '../utils/axiosWithAuth';
@@ -18,6 +17,14 @@ const View = (props) => {
     }
 
     const handleEdit = (article) => {
+        axiosWithAuth().put(`http://localhost:5000/api/articles/${editId}`, article)
+            .then(res => {
+                setArticles(res.data)
+                setEditing(false);
+            })
+            .catch(err => {
+                console.log(err)
+            })
     }
 
     const handleEditSelect = (id)=> {
@@ -30,7 +37,7 @@ const View = (props) => {
     }
 
     useEffect(() => {
-        axiosWithAuth().get('http://localhost:5000/api/articles')
+        axiosWithAuth().get('http://localhost:5000/api/articles', )
         .then(res => {
             setArticles(res.data)
         })

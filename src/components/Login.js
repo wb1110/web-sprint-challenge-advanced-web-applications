@@ -1,12 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import styled from 'styled-components';
 
+
 const Login = () => {
-    
+    const [value, setValues] = useState({
+        username: "",
+        password: "",
+        error: ""
+    });
+
+    const { push } = useHistory();
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        push("/view")
+    }
+
+    const handleChange = (e) => {
+        setValues({
+            ...value,
+            [e.target.name]: e.target.value
+        });
+    }
+
     return(<ComponentContainer>
         <ModalContainer>
             <h1>Welcome to Blogger Pro</h1>
             <h2>Please enter your account information.</h2>
+            <form onSubmit={handleSubmit}>
+                <label>Username
+                    <input id="username" type="text" name="username" value={value.username} onChange={handleChange} />
+                </label>
+                <label>Password
+                    <input id="password" type="password" name="password" value={value.password} onChange={handleChange} />
+                </label>
+                <input id="submit" type="submit" value="Submit"/>
+            </form>
+            <p id="error">{`${value.error}`}</p>
         </ModalContainer>
     </ComponentContainer>);
 }

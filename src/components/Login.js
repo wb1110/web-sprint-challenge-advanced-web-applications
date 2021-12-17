@@ -22,7 +22,6 @@ const Login = () => {
                 push("/view")
             })
             .catch(err => {
-                console.log(error)
                 setValues({
                     ...value,
                     username: "",

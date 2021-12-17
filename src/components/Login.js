@@ -18,7 +18,6 @@ const Login = () => {
         axios.post(`http://localhost:5000/api/login`, { username: value.username, password: value.password })
         // username: Lambda password: School
             .then(res => {
-                console.log(res.data)
                 localStorage.setItem('token', res.data.token)
                 push("/view")
             })

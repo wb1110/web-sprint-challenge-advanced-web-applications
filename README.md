@@ -90,7 +90,7 @@ In this project, you will demonstrate your mastery of these skills by creating *
 ### Logout Authentication
 > *Add in the http requests needed to logout of the application.*
 
-* [ ] In `Logout.js`, execute a http request to logout on mount. When the request is complete, the user's security token should be removed and the browser should redirect to the login page.
+* [X] In `Logout.js`, execute a http request to logout on mount. When the request is complete, the user's security token should be removed and the browser should redirect to the login page.
 
 ### Advanced Testing
 > *Add the following tests within Article.test.js.*
@@ -118,8 +118,16 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Explain what a token is used for.
 
+A token is a string of cryptic text that grants temporary authorization to a website.
+
 2. What steps can you take in your web apps to keep your data secure?
+
+Utilize JWT and protected routes.
 
 3. Describe how web servers work.
 
+A web server stores the code for different websites to be shared across the world at all times.
+
 4. Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
+
+post, get, put, and delete.
